@@ -43,19 +43,6 @@ A continuación se listan las prácticas numeradas junto con su archivo fuente y
 | **14** | [`14-Captura_y_Almacenamiento_de_Dato_Numerico.asm`](./14-Captura_y_Almacenamiento_de_Dato_Numerico.asm) | Captura y Almacenamiento Numérico | Lectura de texto, validación de rango (1-99), conversión a entero y actualización de stock. |
 | **15** | [`15-Manipulacion_de_Archivo.asm`](./15-Manipulacion_de_Archivo.asm) | Manipulación de Archivo | Creación, escritura y cierre de un archivo de texto (`Inventario.txt`) en disco. |
 
----
-
-## 📂 Códigos Complementarios
-
-Programas de prueba y demostraciones adicionales incluidos en el repositorio:
-
-- [`HolaMundoIrvine32.asm`](./HolaMundoIrvine32.asm): Ejemplo básico de "Hola Mundo" utilizando los procedimientos de la librería `Irvine32`.
-- [`HolaMundoSinIrvine.asm`](./HolaMundoSinIrvine.asm): Ejemplo de salida en consola mediante llamadas nativas al sistema (Win32 API).
-- [`DesplazaminetosRotacion.asm`](./DesplazaminetosRotacion.asm): Pruebas adicionales de rotaciones y desplazamientos de bits.
-- [`push&pull.asm`](./push&pull.asm): Ejemplos demostrativos del comportamiento de la pila.
-- [`RefistroAlmacenExsitencias.asm`](./RefistroAlmacenExsitencias.asm): Plantilla de registro de existencias en almacén.
-
----
 
 ## 🛠️ Requisitos y Compilación
 
