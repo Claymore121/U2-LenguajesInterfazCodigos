@@ -1,0 +1,66 @@
+; Materia: Lenguajes de Interfaz Horario: 8-9
+; Alumno: Lopez ibarra Luis angel
+; Docente: Dr Jose Luis Medina Jimenez
+
+; Ejercicio: Mayor, Menor o Igual con Entrada del Usuario
+; Descripcion: Captura dos numeros e indica si el primero es mayor, menor o igual al segundo.
+
+INCLUDE Irvine32.inc
+
+.data
+msgNum1 BYTE "Ingresa el primer numero: ", 0
+msgNum2 BYTE "Ingresa el segundo numero: ", 0
+
+msgMayor BYTE "El primer numero es mayor", 0
+msgMenor BYTE "El primer numero es menor", 0
+msgIguales BYTE "Los numeros son iguales", 0
+
+num1 DWORD ?
+num2 DWORD ?
+
+.code
+main PROC
+
+    ; se pide el primer numero
+    mov edx, OFFSET msgNum1  
+    call WriteString
+    call ReadInt
+    mov num1, eax
+
+     ; se pide el segundo numero
+    mov edx, OFFSET msgNum2  
+    call WriteString
+    call ReadInt
+    mov num2, eax
+
+    ; se Comparan los dos numeros
+    mov eax, num1
+    mov ebx, num2
+
+    cmp eax, ebx
+
+    ;saltos 
+    jg mayor
+    jl menor
+    je iguales
+
+iguales:
+    mov edx, OFFSET msgIguales
+    call WriteString
+    jmp fin
+
+mayor:
+    mov edx, OFFSET msgMayor
+    call WriteString
+    jmp fin
+
+menor:
+    mov edx, OFFSET msgMenor
+    call WriteString
+
+fin:
+    call Crlf
+    exit
+
+main ENDP
+END main
